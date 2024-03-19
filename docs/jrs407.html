@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #3b3939;
+            display: flex;
+        }
+
+        .image {
+            opacity: 1;
+            transition: opacity 1s ease; /* Transición suave de la opacidad */
+            height: 715px;
+            width: 400px;
+            position: absolute;
+        }
+
+        h2 img {
+            width: 20%;
+            height: auto;
+            display: center;
+            margin: auto;
+            border-radius: 30px;
+            left:40.5%;
+            position:absolute;
+        }
+
+        p{
+            color:white;
+            display:center;
+            left:30%;
+            top:60%;
+            position:absolute;
+        }
+
+        a{
+            color:#5bd0ea;
+        }
+
+        .boton{
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 10px;
+            background-color: #0074D9;
+            color: #bfe1ff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            position:absolute;
+            top:70%;
+            left:50%;
+        }
+    </style>
+</head>
+<body>
+    <img class="image" src="/docs/assets/img/jrs407img/grietas.png" alt="Mi Imagen">
+    <img class="image" src="/docs/assets/img/jrs407img/grietas.png" alt="Mi Imagen" style="left: 74%;">
+    <script>
+          const images = document.querySelectorAll('.image');
+        let isVisible = true;
+
+        function toggleOpacity() {
+            images.forEach((image) => {
+                if (isVisible) {
+                    image.style.opacity = '0';
+                } else {
+                    image.style.opacity = '1';
+                }
+            });
+            isVisible = !isVisible;
+        }
+
+        // Ejecutar la función inicialmente
+        toggleOpacity();
+
+        // Cambiar el intervalo a 4000 ms para invisibilidad
+        setInterval(() => {
+            toggleOpacity();
+        }, 4000);
+    </script>
+
+    <h2 img><img src="/docs/assets/img/jrs407img/persona.jpg" ></h2 img>
+
+        <p>Bienvenido a la página de jrs407, si quieres saber más de mi trabajo prueba a entrar <a href="https://github.com/jrs407">a este enlace</a> <br> toma asiento y ponte cómodo</p>
+        <a href="index.html" class="boton">Volver</a>
+</html>
